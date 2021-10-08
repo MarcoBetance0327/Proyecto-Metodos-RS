@@ -1,0 +1,56 @@
+.contenedor-noticias{
+    @include grid(3, 0);
+    margin: 2rem;
+}
+
+.noticia{
+    position: relative;
+
+    img{
+        height: 25rem;
+        width: 42rem;
+        object-fit: cover;
+        border-bottom: 1rem solid red;
+    }
+
+    .titulo-encima{
+        margin: 0 1rem;
+        position: absolute;
+        top: 55%;
+    }
+
+    a{
+        font-family: $fuente-titulo-noticia;
+        font-size: 2rem;
+    }
+}
+
+.cont-list{
+    .titulo-encima{
+        position: none;
+        color: black;
+        top: auto;
+
+        &:hover{
+            color: rgb(0, 140, 255);
+        }
+    }
+
+    .noticia{
+        height: 35rem;
+    }
+}
+
+.contenedor-noticias{
+    &.tv{
+        @include grid(4, 0.7rem);
+
+        img{
+            border-bottom: none;
+            height: 42rem;
+            width: 30rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,20 @@
+/* BASE */
+
+@import 'base/variables';
+@import 'base/utilidades';
+@import 'base/globales';
+@import 'base/normalize';
+@import 'base/mixins';
+
+
+/* LAYOUT */
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/listado';
+@import 'layout/contenido';
+@import 'layout/login';
+@import 'layout/noticia';
+@import 'layout/formulario';
+@import 'layout/index';
+

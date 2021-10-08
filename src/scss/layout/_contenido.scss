@@ -1,0 +1,18 @@
+.contenedor-tv{
+    @include grid(2, 0);
+    margin: 2rem;
+
+    img{
+        height: 80rem;
+        width: 56rem;
+        object-fit: cover;
+    }
+
+    p{
+        font-size: 2.3rem;
+    }
+
+    h3{
+        margin: -3rem 0 -2rem 0;
+    }
+}
