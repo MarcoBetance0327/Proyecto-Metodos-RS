@@ -3,13 +3,13 @@
         include 'listado.php';
     ?>
 
-    <h2>PELICULAS</h2>
+    <h2>Menú</h2>
 
     <?php 
         include 'listado_peliculas.php'; 
     ?>
 
-    <h2>SERIES</h2>
+    <h2>Pedidos</h2>
 
     <?php 
         include 'listado_series.php'; 
