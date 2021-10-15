@@ -2,7 +2,7 @@
 
     namespace Model;
 
-    class Noticia extends ActiveRecord{
+    class Menu extends ActiveRecord{
         protected static $tabla = 'noticias';
         protected static $columnaDB = ['id', 'titulo', 'imagen', 'imagen2', 'descripcion', 'descripcion2'];
 

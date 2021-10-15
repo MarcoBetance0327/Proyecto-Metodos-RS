@@ -2,37 +2,37 @@
 
     namespace Controllers;
     use MVC\Router;
-    use Model\Noticia;
-    use Model\Pelicula;
+    use Model\Menu;
+    use Model\Pedidos;
     use Model\Serie;
 
     class PaginasController{
         public static function index(Router $router){
             
-            $noticias = Noticia::get(3);
-            $peliculas = Pelicula::get(6);
+            $menu = Menu::get(3);
+            $pedidos = Pedidos::get(6);
             $series = Serie::get(6);
             
             $router->render('paginas/index', [
-                'noticias' => $noticias,
-                'peliculas' => $peliculas,
+                'menu' => $menu,
+                'pedidos' => $pedidos,
                 'series' => $series
             ]);
         }
 
         public static function menu(Router $router){
 
-            $noticias = Noticia::all();
+            $menu = Menu::all();
 
             $router->render('paginas/menu', [
-                'noticias' => $noticias
+                'menu' => $menu
             ]);
         }
 
         public static function noticia(Router $router){
             $id = validarORedireccionar('/noticias');
 
-            $noticia = Noticia::find($id);
+            $noticia = Menu::find($id);
 
             $router->render('paginas/noticia', [
                 'noticia' => $noticia
@@ -41,10 +41,10 @@
 
         public static function pedidos(Router $router){
 
-            $peliculas = Pelicula::all();
+            $pedidos = Pedidos::all();
 
             $router->render('paginas/pedidos', [
-                'peliculas' => $peliculas
+                'pedidos' => $pedidos
             ]);
 
         }
@@ -52,7 +52,7 @@
         public static function pelicula(Router $router){
             $id = validarORedireccionar('/peliculas');
 
-            $pelicula = Pelicula::find($id);
+            $pelicula = Pedidos::find($id);
 
             $router->render('paginas/pelicula', [
                 'pelicula' => $pelicula

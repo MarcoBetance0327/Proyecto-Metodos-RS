@@ -5,24 +5,24 @@
     use MVC\Router;
     use Controllers\PaginasController;
     use Controllers\LoginController;
-    use Controllers\NoticiasController;
-    use Controllers\PeliculaController;
+    use Controllers\MenuController;
+    use Controllers\PedidosController;
     use Controllers\SerieController;
 
     $router = new Router();
 
     // zona Privada
-    $router->get('/noticias/crear' , [NoticiasController::class, 'crear']);
-    $router->post('/noticias/crear' , [NoticiasController::class, 'crear']);
-    $router->get('/noticias/actualizar' , [NoticiasController::class, 'actualizar']);
-    $router->post('/noticias/actualizar' , [NoticiasController::class, 'actualizar']);
-    $router->post('/noticias/eliminar' , [NoticiasController::class, 'eliminar']);
+    $router->get('/noticias/crear' , [MenuController::class, 'crear']);
+    $router->post('/noticias/crear' , [MenuController::class, 'crear']);
+    $router->get('/noticias/actualizar' , [MenuController::class, 'actualizar']);
+    $router->post('/noticias/actualizar' , [MenuController::class, 'actualizar']);
+    $router->post('/noticias/eliminar' , [MenuController::class, 'eliminar']);
 
-    $router->get('/peliculas/crear', [PeliculaController::class, 'crear']);
-    $router->post('/peliculas/crear', [PeliculaController::class, 'crear']);
-    $router->get('/peliculas/actualizar', [PeliculaController::class, 'actualizar']);
-    $router->post('/peliculas/actualizar', [PeliculaController::class, 'actualizar']);
-    $router->post('/peliculas/eliminar', [PeliculaController::class, 'eliminar']);
+    $router->get('/peliculas/crear', [PedidosController::class, 'crear']);
+    $router->post('/peliculas/crear', [PedidosController::class, 'crear']);
+    $router->get('/peliculas/actualizar', [PedidosController::class, 'actualizar']);
+    $router->post('/peliculas/actualizar', [PedidosController::class, 'actualizar']);
+    $router->post('/peliculas/eliminar', [PedidosController::class, 'eliminar']);
 
     $router->get('/series/crear', [SerieController::class, 'crear']);
     $router->post('/series/crear', [SerieController::class, 'crear']);

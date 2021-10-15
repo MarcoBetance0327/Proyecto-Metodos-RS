@@ -2,7 +2,7 @@
 
     namespace Model;
 
-    class Pelicula extends ActiveRecord{
+    class Pedidos extends ActiveRecord{
         protected static $tabla = 'peliculas';
         protected static $columnaDB = ['id', 'titulo', 'año', 'imagen', 'trama'];
 

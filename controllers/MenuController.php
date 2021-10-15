@@ -2,21 +2,21 @@
 
     namespace Controllers;
 
-    use Model\Noticia;
+    use Model\Menu;
     use MVC\Router;
     use Intervention\Image\ImageManagerStatic as Image;
 
-    class NoticiasController{
+    class MenuController{
         public static function crear(Router $router){
 
-            $noticia = new Noticia;
+            $noticia = new Menu;
             // Arreglo con mensajes de errores
-            $errores = Noticia::getErrores();
+            $errores = Menu::getErrores();
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
                 // Crear una nueva instancia 
-                $noticia = new Noticia($_POST['noticia']);
+                $noticia = new Menu($_POST['noticia']);
 
                 // Generar nombre único
                 $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
@@ -54,9 +54,9 @@
         public static function actualizar(Router $router){
             $id = validarORedireccionar('/noticias');
 
-            $noticia = Noticia::find($id);
+            $noticia = Menu::find($id);
 
-            $errores = Noticia::getErrores();
+            $errores = Menu::getErrores();
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 $args = $_POST['noticia'];
@@ -106,7 +106,7 @@
                     $tipo = $_POST['tipo'];
 
                     if(validarTipoContenido($tipo)){
-                        $noticia = Noticia::find($id);
+                        $noticia = Menu::find($id);
                         $noticia->eliminar();
                     }
                 }

@@ -3,17 +3,17 @@
     namespace Controllers;
     use MVC\Router;
     use Intervention\Image\ImageManagerStatic as Image;
-    use Model\Pelicula;
+    use Model\Pedidos;
 
-    class PeliculaController{
+    class PedidosController{
         public static function crear(Router $router){
 
-            $pelicula = new Pelicula;
+            $pelicula = new Pedidos;
 
-            $errores = Pelicula::getErrores();
+            $errores = Pedidos::getErrores();
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                $pelicula = new Pelicula($_POST['pelicula']);
+                $pelicula = new Pedidos($_POST['pelicula']);
 
                 $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
 
@@ -40,9 +40,9 @@
         public static function actualizar(Router $router){
             $id = validarORedireccionar('/peliculas');
 
-            $pelicula = Pelicula::find($id);
+            $pelicula = Pedidos::find($id);
 
-            $errores = Pelicula::getErrores();
+            $errores = Pedidos::getErrores();
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 $args = $_POST['pelicula'];
@@ -88,7 +88,7 @@
                     $tipo = $_POST['tipo'];
 
                     if(validarTipoContenido($tipo)){
-                        $pelicula = Pelicula::find($id);
+                        $pelicula = Pedidos::find($id);
                         $pelicula->eliminar();
                     }
                 }
