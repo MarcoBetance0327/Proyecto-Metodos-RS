@@ -34,9 +34,9 @@
 
         <footer class="footer">
             <div class="div-enlaces">
-                <a href="/noticias">Menú</a>
-                <a href="/peliculas">Pedidos</a>
-                <a href="/series">Acerca de</a>
+                <a href="/menu">Menú</a>
+                <a href="/pedidos">Pedidos</a>
+                <a href="/acerca-de">Acerca de</a>
             </div>
 
             <p class="copyright">Todos los derechos Reservados <?php echo date('Y'); ?> &copy;</p>
