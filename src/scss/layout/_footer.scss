@@ -1,16 +1,15 @@
 footer{
     display: flex;
     flex-direction: row;
-    background-color: rgb(187, 1, 1);
+    background-color: #353434;
     margin-bottom: 0;
     height: 10rem;
 
-    a{
-        color: rgb(250, 206, 112);
+    a, p{
+        color: white
     }
 
     p{
-        color: white;
         padding-left: 20rem;
     }
 }
