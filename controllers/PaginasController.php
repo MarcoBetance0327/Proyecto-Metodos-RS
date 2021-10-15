@@ -20,11 +20,11 @@
             ]);
         }
 
-        public static function noticias(Router $router){
+        public static function menu(Router $router){
 
             $noticias = Noticia::all();
 
-            $router->render('paginas/noticias', [
+            $router->render('paginas/menu', [
                 'noticias' => $noticias
             ]);
         }
@@ -39,11 +39,11 @@
             ]);
         }
 
-        public static function peliculas(Router $router){
+        public static function pedidos(Router $router){
 
             $peliculas = Pelicula::all();
 
-            $router->render('paginas/peliculas', [
+            $router->render('paginas/pedidos', [
                 'peliculas' => $peliculas
             ]);
 
@@ -59,11 +59,11 @@
             ]);
         }
 
-        public static function series(Router $router){
+        public static function acerca(Router $router){
 
             $series = Serie::all();
 
-            $router->render('paginas/series', [
+            $router->render('paginas/acerca-de', [
                 'series' => $series
             ]);
         }

@@ -12,9 +12,9 @@
         <header class="header">
             <div class="apartados-header">
                 <div class="div-enlaces">
-                    <a href="/noticias">Menú</a>
-                    <a href="/peliculas">Pedidos</a>
-                    <a href="/series">Acerca de</a>
+                    <a href="/menu">Menú</a>
+                    <a href="/pedidos">Pedidos</a>
+                    <a href="/acerca-de">Acerca de</a>
                 </div>
 
                 <div class="div-login">

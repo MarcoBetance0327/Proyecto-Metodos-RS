@@ -33,13 +33,13 @@
     // Zona Publica
     $router->get('/', [PaginasController::class, 'index']);
 
-    $router->get('/noticias', [PaginasController::class, 'noticias']);
+    $router->get('/menu', [PaginasController::class, 'menu']);
     $router->get('/noticia', [PaginasController::class, 'noticia']);
 
-    $router->get('/peliculas', [PaginasController::class, 'peliculas']);
+    $router->get('/pedidos', [PaginasController::class, 'pedidos']);
     $router->get('/pelicula', [PaginasController::class, 'pelicula']);
 
-    $router->get('/series', [PaginasController::class, 'series']);
+    $router->get('/acerca-de', [PaginasController::class, 'acerca']);
     $router->get('/serie', [PaginasController::class, 'serie']);
 
     // Login y Autenticación 
@@ -47,10 +47,6 @@
     $router->post('/login', [LoginController::class, 'login']);
     $router->get('/registro', [LoginController::class, 'registro']);
     $router->post('/registro', [LoginController::class, 'registro']);
-
-
-
-
 
 
     $router->comprobarRutas();
