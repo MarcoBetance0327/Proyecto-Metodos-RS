@@ -4,8 +4,8 @@
         <a href="/noticias/crear" class="enlace-crear">Crear Noticia</a>
     </div>
 
-    <div class="cont-list">
+    <!-- <div class="cont-list">
         <?php include 'listado.php'; ?>
-    </div>
+    </div> -->
     
 </main>

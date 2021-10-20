@@ -3,6 +3,4 @@
         <h2>Pedidos</h2>
         <a href="/peliculas/crear" class="enlace-crear">Agregar Pelicula</a>
     </div>
-    
-    <?php include 'listado_peliculas.php'; ?>
 </main>

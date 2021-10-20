@@ -4,6 +4,4 @@
         <a href="/series/crear" class="enlace-crear">Agregar Serie</a>
     </div>
     
-
-    <?php include 'listado_series.php'; ?>
 </main>

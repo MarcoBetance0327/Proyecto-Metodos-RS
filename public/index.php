@@ -7,7 +7,7 @@
     use Controllers\LoginController;
     use Controllers\MenuController;
     use Controllers\PedidosController;
-    use Controllers\SerieController;
+    // use Controllers\SerieController;
 
     $router = new Router();
 
