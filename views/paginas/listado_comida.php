@@ -8,5 +8,12 @@
         <?php } ?>
     </div>
 
-    <p>Hola Mundo</p>
+    <div class="enlaces-redes">
+        <a href="#">
+            <img src="/imagenes/siguenos_facebook.png">
+        </a>
+        <a href="#">
+            <img src="/imagenes/visitanos_instagram.png">
+        </a>
+    </div>
 </div>
