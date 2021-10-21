@@ -9,10 +9,10 @@
     class PaginasController{
         public static function index(Router $router){
             
-            $menu = Menu::get(3);
+            $comidas = Comidas::all();
             
             $router->render('paginas/index', [
-                'menu' => $menu,
+                'comidas' => $comidas,
             ]);
         }
 

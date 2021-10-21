@@ -1,4 +1,4 @@
-<div class="contenedor-noticias">
+<div class="contenedor-menu">
     <?php foreach($menu as $menu) { ?>
         <div class="noticia">
             <!-- <img loading="lazy" src="../imagenes/<?php echo $menu->imagen; ?>"> -->
