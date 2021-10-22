@@ -56,17 +56,20 @@ h4 {
 }
 
 .boton{
+    display: flex;
+    justify-content: center;
+    margin: 0 58rem;
     font-size: 2.5rem;
     font-family: $fuente1;
     font-weight: 600;
     padding: 2rem;
     border-radius: 1rem;
-    margin: 2rem auto;
     background-color: rgb(182, 180, 180);
     border: none;
 
     &:hover{
         background-color: darken(rgb(182, 180, 180), 5);
+        color: white;
         cursor: pointer;
     }
 }
@@ -101,3 +104,4 @@ h4 {
         }
     }
 }
+

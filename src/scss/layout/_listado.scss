@@ -1,17 +1,27 @@
-.layout-menu{
-    @include grid(2, 0);
+.contenedor-menu{
+    @include grid(4, 0);
+    margin: 2rem;
+
+    &.index{
+        @include grid(3,0);
+
+        img{
+            height: 25rem;
+            width: 38rem;
+            object-fit: cover;
+        }
+    }
 }
 
-.contenedor-menu{
-    @include grid(3, 0);
-    margin: 2rem;
+.titulo-menu{
+    color: black;
 }
 
 .enlaces-redes{
     margin-top: 1.2rem;
 }
 
-.noticia{
+.menu{
     display: flex;
     flex-direction: column;
     align-items: center;
