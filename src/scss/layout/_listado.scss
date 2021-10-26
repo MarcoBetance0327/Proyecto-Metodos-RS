@@ -1,6 +1,25 @@
+.div-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .contenedor-menu{
     @include grid(4, 0);
     margin: 2rem;
+
+    @include media(t2){
+        @include grid(2, 0);
+    }
+
+    @include media(t1){
+        @include grid(3, 0);
+    }
+
+    @include media(tab){
+        @include grid(3, 0);
+    }
 
     &.index{
         @include grid(3,0);
@@ -9,6 +28,21 @@
             height: 25rem;
             width: 38rem;
             object-fit: cover;
+
+            @include media(t2){
+                height: 8rem;
+                width: 13rem;
+            }
+
+            @include media(t1){
+                height: 12rem;
+                width: 17rem;
+            }
+
+            @include media(tab){
+                height: 15rem;
+                width: 24rem;
+            }
         }
     }
 }
@@ -30,11 +64,34 @@
         height: 17rem;
         width: 28rem;
         object-fit: cover;
+
+        @include media(t2){
+            height: 12rem;
+            width: 17rem;
+        }
+
+        @include media(t1){
+            height: 12rem;
+            width: 15.5rem;
+        }
+
+        @include media(tab){
+            height: 15rem;
+            width: 22.5rem;
+        }
     }
 
     a{
         font-family: $fuente-titulo-noticia;
         font-size: 2rem;
+
+        @include media(t2){
+            font-size: 1.4rem;
+        }
+
+        @include media(t1){
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -63,6 +120,15 @@
             height: 42rem;
             width: 30rem;
         }
+    }
+}
+
+.boton{
+
+    @include media(t2){
+        margin-top: -1rem;
+        font-size: 2rem;
+        padding: 1.5rem;    
     }
 }
 

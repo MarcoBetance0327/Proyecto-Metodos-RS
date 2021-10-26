@@ -4,3 +4,25 @@
     grid-template-columns: repeat($columnas, 1fr);
     justify-items: center;
 }
+
+// Responsive
+
+$telefono2: 411px;
+$telefono1: 767px;
+$tablet: 1023px;
+$computadora: 1360px;
+
+@mixin media($media) {
+    @if $media == t2 {
+        @media (max-width: $telefono2) { @content; }
+    }
+    @else if $media == t1 {
+        @media (min-width: 412px) and (max-width: 620px) { @content; }
+    }
+    @else if $media == tab {
+        @media (min-width: 621px) and (max-width: $tablet) { @content; }
+    }
+    @else if $media == pc {
+        @media (min-width: $computadora) { @content; }
+    }
+}

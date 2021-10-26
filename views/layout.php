@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <a href="/" class="enlace-icono">Food<img src="../build/img/icono.png">Food</a>
+            <a href="/" class="enlace-icono"><img src="../build/img/icono.png"></a>
 
         </header>
 

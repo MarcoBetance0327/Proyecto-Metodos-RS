@@ -42,6 +42,18 @@
     justify-content: center;
     margin: 0 15rem;
 
+    @include media(t2){
+        margin: 0 1rem;
+    }
+
+    @include media(t1){
+        margin: 0 3rem;
+    }
+
+    @include media(tab){
+        margin: 0 5rem;
+    }
+
     h2{
         color: white;
     }
