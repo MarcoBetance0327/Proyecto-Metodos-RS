@@ -23,9 +23,6 @@
             <input type="submit" value="Iniciar Sesión" class="boton">
         </form>
 
-        <div class="img-login">
-            <img src="/build/img/key.svg">
-        </div>
     </div>
     
 </main>

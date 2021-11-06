@@ -15,10 +15,10 @@
 
         public function __construct($args = []){
             $this->id = $args['id'] ?? NULL;
-            $this->id = $args['nombre'] ?? '';
-            $this->id = $args['tipo'] ?? '';
-            $this->id = $args['precio'] ?? '';
-            $this->id = $args['descripcion'] ?? '';
-            $this->id = $args['imagen'] ?? NULL;
+            $this->nombre = $args['nombre'] ?? '';
+            $this->tipo = $args['tipo'] ?? '';
+            $this->precio = $args['precio'] ?? '';
+            $this->descripcion = $args['descripcion'] ?? '';
+            $this->imagen = $args['imagen'] ?? NULL;
         }
     }

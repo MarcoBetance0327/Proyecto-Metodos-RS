@@ -41,6 +41,8 @@
 
             <p class="copyright">Todos los derechos Reservados <?php echo date('Y'); ?> &copy;</p>
         </footer>
+
+        <script src="build/js/bundle.min.js"></script>
         
     </body>
 </html>

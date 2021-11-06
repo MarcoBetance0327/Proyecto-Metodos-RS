@@ -1,15 +1,51 @@
 footer{
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #353434;
     margin-bottom: 0;
     height: 10rem;
 
     a, p{
-        color: white
+        color: white;
     }
 
     p{
         padding-left: 20rem;
+    }
+
+    .div-enlaces{
+        @include media(t2){
+            font-size: 2rem;
+            margin-left: -2rem;
+        }
+
+        @include media(t1){
+            font-size: 3rem;
+            margin-left: -2rem;
+        }
+
+        @include media(tab){
+            font-size: 3.5rem;
+            margin-left: -2rem;
+        }
+    }
+
+    .copyright{
+        @include media(t2){
+            padding-left: 3rem;
+        }
+
+        @include media(t1){
+            padding-left: 4rem;
+        }
+
+        @include media(tab){
+            padding-left: 5rem;
+        }
+
+        &:hover{
+            color: white;
+        }
     }
 }

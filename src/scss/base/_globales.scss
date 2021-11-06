@@ -65,6 +65,7 @@ h4 {
     border-radius: 1rem;
     background-color: rgb(182, 180, 180);
     border: none;
+    margin-bottom: 2rem;
 
     &:hover{
         background-color: darken(rgb(182, 180, 180), 5);
@@ -100,6 +101,48 @@ h4 {
         &:hover{
             background-color: darken(rgb(182, 180, 180), 5);
             cursor: pointer;
+        }
+    }
+}
+
+.navegacion{
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0;
+
+    .boton-inicial{
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        border-right: 1px solid black;
+    }
+
+    .boton-final{
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        border-left: 1px solid black;
+    }
+
+    button{
+        width: 18rem;
+        height: 7rem;
+        background-color: gray;
+        border: none;
+        opacity: .65;
+
+        &.actual{
+            background-color: black;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        h3{
+            color: white;
+            margin: 0;
+            font-family: $fuente2;
         }
     }
 }

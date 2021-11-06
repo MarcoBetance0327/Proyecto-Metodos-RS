@@ -1,0 +1,34 @@
+.a-acerca{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-family: $fuente3;
+    }
+}
+
+.acerca-superior{
+    @include grid(2, 2rem);
+    margin: 0 3rem;
+}
+
+.input-contacto{
+    width: 70rem;
+}
+
+.parrafo-acerca{
+    p{
+        color: black;
+    }
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mapa{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 ;
+}

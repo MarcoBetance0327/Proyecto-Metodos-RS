@@ -17,12 +17,18 @@
         }
 
         public static function menu(Router $router){
+            $tipo1 = 'empanizado';
+            $tipo2 = 'tropical';
+            $tipo3 = 'frio';
+            $comidas = Comidas::tipo($tipo1);
+            $comidas2 = Comidas::tipo($tipo2);
 
-            $comidas = Comidas::all();
+            // $comidas = Comidas::all();
             $bebidas = Bebidas::all();
 
             $router->render('paginas/menu', [
                 'comidas' => $comidas,
+                'comidas2' => $comidas2,
                 'bebidas' => $bebidas
             ]);
         }

@@ -120,6 +120,14 @@
             }
         }
 
+        public static function tipo($tipo){
+            $query = "SELECT * FROM " . static::$tabla . " WHERE tipo = '${tipo}' " . " ORDER BY id DESC";
+
+            $resultado = self::consultarSQL($query);
+
+            return $resultado;
+        }
+
         public static function get($cantidad){
             $query = "SELECT * FROM " . static::$tabla . " ORDER BY id DESC" . " LIMIT " . $cantidad;
 

@@ -1,0 +1,25 @@
+.apartado2{
+    position: relative;
+    img{
+        position: relative;
+        display: inline-block;
+        height: 50rem;
+        object-fit: cover;
+    }
+
+    .texto-encima{
+        position: absolute;
+        color: white;
+    }
+
+    p{
+        top: 25%;
+        font-family: $fuente3;
+        margin: 0 20rem;
+    }
+
+    .boton-a2{
+        top: 80%;
+    }
+    
+}
