@@ -21,4 +21,24 @@
             $this->descripcion = $args['descripcion'] ?? '';
             $this->imagen = $args['imagen'] ?? NULL;
         }
+
+        public function validar(){
+            if(!$this->nombre){
+                self::$errores[] = 'El Nombre es obligatorio';
+            }
+            if(!$this->tipo){
+                self::$errores[] = 'El Tipo de Sushi es obligatorio';
+            }
+            if(!$this->precio){
+                self::$errores[] = 'El Precio es obligatorio';
+            }
+            if(!$this->descripcion){
+                self::$errores[] = 'La Descripción es obligatoria';
+            }
+            if(!$this->imagen){
+                self::$errores[] = 'La Imagen es obligatoria';
+            }
+            
+            return self::$errores;
+        }
     }

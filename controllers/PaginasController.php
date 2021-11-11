@@ -5,6 +5,7 @@
     use Model\Menu;
     use Model\Comidas;
     use Model\Bebidas;
+    use Model\Admin;
 
     class PaginasController{
         public static function index(Router $router){
@@ -17,13 +18,14 @@
         }
 
         public static function menu(Router $router){
+            // Sección Menú (Tipo de Sushi)
             $tipo1 = 'empanizado';
             $tipo2 = 'tropical';
             $tipo3 = 'frio';
+
             $comidas = Comidas::tipo($tipo1);
             $comidas2 = Comidas::tipo($tipo2);
 
-            // $comidas = Comidas::all();
             $bebidas = Bebidas::all();
 
             $router->render('paginas/menu', [

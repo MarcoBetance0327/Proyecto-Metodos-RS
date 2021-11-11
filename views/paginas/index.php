@@ -20,6 +20,6 @@
         <a href="/pedidos" class="boton boton-a2 texto-encima">Ordena Ya</a>
     </div>
 
-    <p>Hola</p>
+    <p></p>
     
 </main>

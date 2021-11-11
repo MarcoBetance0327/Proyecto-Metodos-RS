@@ -1,4 +1,4 @@
-<main class="contenedor seccion contenido-centrado contenedor-login">
+<main class="contenedor contenido-centrado contenedor-login">
     <h1>Iniciar Sesión</h1>
 
     <?php foreach($errores as $error): ?>

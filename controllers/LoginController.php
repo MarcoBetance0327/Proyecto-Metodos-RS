@@ -40,4 +40,12 @@
 
             $router->render('auth/registro');
         }
+
+        public static function logout(){
+            session_start();
+
+            $_SESSION = [];
+
+            header('Location: /');
+        }
     }

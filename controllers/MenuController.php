@@ -5,48 +5,45 @@
     use Model\Menu;
     use MVC\Router;
     use Intervention\Image\ImageManagerStatic as Image;
+    use Model\Comidas;
 
-    class MenuController{
+class MenuController{
         public static function crear(Router $router){
 
-            $noticia = new Menu;
+            $comidas = new Comidas;
             // Arreglo con mensajes de errores
-            $errores = Menu::getErrores();
+            $errores = Comidas::getErrores();
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
                 // Crear una nueva instancia 
-                $noticia = new Menu($_POST['noticia']);
+                $comidas = new Comidas($_POST['comida']);
 
                 // Generar nombre único
                 $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
-                $nombreImagen2 = md5( uniqid( rand(), true ) ) . ".jpg";
         
                 // Setear Imagen
                 // Realiza un resize a la imagen con intervention
-                if($_FILES['noticia']['tmp_name']['imagen'] || $_FILES['noticia']['tmp_name']['imagen2']){
-                    $image = Image::make($_FILES['noticia']['tmp_name']['imagen'])->fit(800, 600);
-                    $image2 = Image::make($_FILES['noticia']['tmp_name']['imagen2'])->fit(800, 600);
-                    $noticia->setImagen($nombreImagen);
-                    $noticia->setImagen2($nombreImagen2);
+                if($_FILES['comida']['tmp_name']['imagen']){
+                    $image = Image::make($_FILES['comida']['tmp_name']['imagen'])->fit(800, 600);
+                    $comidas->setImagen($nombreImagen);
                 }
 
                 // Validar
-                $errores = $noticia->validar();
+                $errores = $comidas->validar();
 
                 if(empty($errores)){
                     // Guarda la imagen en el servidor
                     $image->save(CARPETA_IMAGENES . $nombreImagen);
-                    $image2->save(CARPETA_IMAGENES . $nombreImagen2);
 
                     // Guarda en la base de datos
-                    $resultado = $noticia->guardar();
+                    $resultado = $comidas->guardar();
                 }
             }
 
 
-            $router->render('noticias/crear', [
-                'noticia' => $noticia,
+            $router->render('menu/crear', [
+                'comidas' => $comidas,
                 'errores' => $errores
             ]);
         }

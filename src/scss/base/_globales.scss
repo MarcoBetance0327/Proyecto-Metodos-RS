@@ -87,6 +87,8 @@ h4 {
     }
 
     .enlace-crear{
+        display: flex;
+        align-items: center;
         font-size: 2rem;
         color: black;
         background-color: rgb(182, 180, 180);
@@ -94,9 +96,7 @@ h4 {
         border-radius: 1rem;
         font-family: $fuente3;
         font-weight: 600;
-        display: flex;
-        align-items: center;
-        margin: 0 0 1rem 80%;
+        margin: 0 0 1rem auto;
 
         &:hover{
             background-color: darken(rgb(182, 180, 180), 5);
@@ -146,4 +146,6 @@ h4 {
         }
     }
 }
+
+
 

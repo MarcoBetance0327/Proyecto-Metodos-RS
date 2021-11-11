@@ -67,4 +67,17 @@
 
         return $id;
     }
+    
+    function validarTipo($admin){
+        $tipo = '';
+
+        $tipo = $_SESSION['usuario'];
+
+        if($admin = $tipo){
+            return $admin;
+        }else{
+            return $tipo;
+        }
+    }
+
 ?>

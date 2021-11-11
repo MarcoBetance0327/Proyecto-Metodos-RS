@@ -4,16 +4,18 @@
 
     class Admin extends ActiveRecord{
         protected static $tabla = 'usuarios';
-        protected static $columnaDB = ['id', 'email', 'password'];
+        protected static $columnaDB = ['id', 'email', 'password', 'tipo'];
 
         public $id;
         public $email;
         public $password;
+        public $tipo;
 
         public function __construct( $args = []){
             $this->id = $args['id'] ?? null;
             $this->email = $args['email'] ?? '';
             $this->password = $args['password'] ?? '';
+            $this->tipo = $args['tipo'] ?? '';
         }
 
         public function validar(){
@@ -42,14 +44,15 @@
         }
 
         public function comprobarPassword($resultado){
-            $usuario = $_POST['email'];
-            $password = $_POST['password'];
+            $usuario = $resultado->fetch_object();
 
-            $query = "SELECT COUNT(*) FROM usuarios WHERE email = '$usuario' AND password = '$password' ";
+            $autenticado = password_verify($this->password, password_hash($usuario->password, PASSWORD_BCRYPT));
 
-            $resultado = self::$db->query($query);
+            if(!$autenticado){
+                self::$errores[] = "El Password es Incorrecto";
+            }
 
-            return $resultado;
+            return $autenticado;
         }
 
         public function autenticar(){
@@ -59,5 +62,8 @@
             $_SESSION['login'] = true;
 
             header('Location: /');
+
         }
+
+        
     }

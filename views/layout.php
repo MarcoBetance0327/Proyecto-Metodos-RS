@@ -1,3 +1,18 @@
+<?php
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    $auth = $_SESSION['login'] ?? null;
+
+    if(!isset($inicio)){
+        $inicio = false;
+    }
+
+    error_reporting(0);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,9 +33,13 @@
                 </div>
 
                 <div class="div-login">
-                    <a href="/login" class="enlace-login">Login</a> 
-                    <h2>|</h2>
-                    <a href="/registro" class="enlace-login">Registrarse</a> 
+                    <?php if($auth): ?>
+                        <a href="/logout" class="enlace-login">Cerrar Sesión</a>
+                    <?php else: ?>
+                        <a href="/login" class="enlace-login">Login</a> 
+                        <h2>|</h2>
+                        <a href="/registro" class="enlace-login">Registrarse</a> 
+                    <?php endif; ?>
                 </div>
             </div>
 

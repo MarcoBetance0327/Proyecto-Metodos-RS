@@ -1,7 +1,28 @@
+<?php
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    $auth = $_SESSION['login'] ?? null;
+
+
+    if(!isset($inicio)){
+        $inicio = false;
+    }
+
+    error_reporting(E_ERROR | E_PARSE);
+?>
+
 <main class="main-noticias">
+
+    <script src="build/js/bundle.min.js"></script>
+
     <div class="div_edicion">
         <h2>Menú</h2>
-        <!-- <a href="/noticias/crear" class="enlace-crear">Crear Noticia</a> -->
+        <?php if($_SESSION['usuario'] === 'admin@admin.com'): ?>
+            <a href="/menu/crear" class="enlace-crear">Agregar Producto</a>
+        <?php endif; ?>
     </div>
 
     <nav class="navegacion">
@@ -60,6 +81,5 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         
-    <script src="build/js/bundle.min.js"></script>
 
 </main>

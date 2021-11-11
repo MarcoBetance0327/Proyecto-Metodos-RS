@@ -127,7 +127,7 @@
 
             return $resultado;
         }
-
+        
         public static function get($cantidad){
             $query = "SELECT * FROM " . static::$tabla . " ORDER BY id DESC" . " LIMIT " . $cantidad;
 

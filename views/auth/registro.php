@@ -1,4 +1,4 @@
-<main class="contenedor seccion contenido-centrado contenedor-login">
+<main class="contenedor contenido-centrado contenedor-login">
     <h1>Registrarse</h1>
 
     <div class="div-login">
@@ -19,10 +19,6 @@
 
             <input type="submit" value="Registrarse" class="boton">
         </form>
-
-        <div class="img-login">
-            <img src="/build/img/registro.svg">
-        </div>
     </div>
     
 </main>

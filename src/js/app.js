@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function(){
     iniciarApp();
 });
 
+
 function iniciarApp(){
+    mostrarSeccion();
+
     cambiarSeccion();
 
-    mostrarSeccion();
 }
 
 function mostrarSeccion(){
@@ -40,4 +42,6 @@ function cambiarSeccion(){
             mostrarSeccion();
         });
     });
+    
 }
+
